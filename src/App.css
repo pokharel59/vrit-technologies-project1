@@ -1,38 +1,177 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+} 
+
 .App {
-  text-align: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.feature-section {
+  height: 100%;
+  padding: 90px 100px 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.feature-section-content {
+  height: 100%;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px;
+}
+
+.feature-section-title{
+}
+
+.feature-section-title h1, .feature-section-title h3 {
+  margin: 0;
+}
+
+.feature-section-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.feature-section-card div {
+  border-radius: 15px;
   color: white;
+  padding: 20px 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.card-clarity{
+  position: relative;
+  overflow: visible;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-clarity img {
+  position: absolute;
+  top: 25px;
+  left: -30px;
+  width: 50%;
+  height: auto;
+  z-index: 1;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.2));
+  animation: float 3s ease-in-out infinite;
+}
+
+.card-clarity-text {
+  width: 100%;
+  background-color: #f45b5b;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 0;
+}
+
+.card-clarity-text p {
+  width: 60%;
+  text-align: end;
+}
+
+.card-learn {
+  position: relative;
+  overflow: visible;
+}
+
+.card-learn img {
+  position: absolute;
+  width: 40%;
+  height: auto;
+  top: 20px;
+  right: 10px;
+  z-index: 1;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.2));
+  animation: float 3s ease-in-out infinite;
+
+}
+
+.card-learn-text {
+  width: 100%;
+  background-color: #5492a0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 0;
+}
+
+.card-learn-text p {
+  width: 60%;
+  text-align: start;
+}
+
+.card-mentor {
+  position: relative;
+  overflow: visible;
+}
+
+.card-mentor img {
+  position: absolute;
+  width: 60%;
+  height: auto;
+  top: 100px;
+  left: -30px;
+  z-index: 1;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.2));
+  animation: float 3s ease-in-out infinite;
+
+}
+
+.card-mentor-text {
+  width: 100%;
+  background-color: #6c64a8;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 0;
+}
+
+.card-mentor-text p {
+  width: 55%;
+  text-align: end;
+}
+
+.card-showcase {
+  position: relative;
+  overflow: visible;
+}
+
+.card-showcase img {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  top: 70px;
+  right: -15px;
+  z-index: 1;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.2));
+  animation: float 3s ease-in-out infinite;
+
+}
+
+.card-showcase-text {
+  width: 100%;
+  background-color: #a88964;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 0;
+}
+
+.card-showcase-text p {
+  width: 60%;
+  text-align: start;
+}
+
+/* keyframes for floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
+
