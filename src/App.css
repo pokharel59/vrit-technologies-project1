@@ -16,9 +16,8 @@
 .feature-section-content {
   height: 100%;
   display: flex;
+  overflow-y: hidden;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
 }
 
 .feature-section-title{
@@ -27,17 +26,17 @@
   gap: 15px;
 }
 
-.feature-section-title h1{
-  font-size: 24px;
+.feature-section-title .explore {
+  font-size: 18px;
+  margin: 0;
   font-family: 'Outfit', sans-serif;
 }
 
-.feature-section-title h1, .feature-section-title h3 {
+.feature-section-title .dive-into {
+  font-size: 30px;
+  font-weight: 700;
   margin: 0;
-}
-
-.feature-section-title h3 {
-  font-size: 32;
+  font-family: 'Outfit', sans-serif;
 }
 
 .highlight {
@@ -47,14 +46,15 @@
 .feature-section-card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  width: 90%;
-  height: 50%;
+  gap: 10px;
 }
 
 .feature-section-card div {
   border-radius: 15px;
   color: white;
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
 }
 
 .card-clarity{
@@ -63,13 +63,60 @@
 
 .card-clarity img {
   position: absolute;
-  width: 20%;
+  width: 250px;
   height: auto;
-  top: 100px;
-  left: 60px;
+  left: -10px;
+  bottom: -50px;
   z-index: 1;
   filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.2));
   animation: float 3s ease-in-out infinite;
+}
+
+.card-mentor img {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  left: -20px;
+  bottom: -25px;
+  z-index: 1;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.2));
+  animation: float 3s ease-in-out infinite;
+}
+
+.card-learn img {
+  position: absolute;
+  width: 230px;
+  height: auto;
+  right: -20px;
+  bottom: -120px;
+  z-index: 1;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.2));
+  animation: float 3s ease-in-out infinite;
+}
+
+.card-showcase img {
+  position: absolute;
+  width: 250px;
+  height: auto;
+  right: -10px;
+  bottom: -20px;
+  z-index: 1;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.2));
+  animation: float 3s ease-in-out infinite;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  font-family: 'Outfit', sans-serif;
+}
+
+.card-subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 15px 0;
+  font-family: 'Outfit', sans-serif;
 }
 
 .card-clarity-text {
@@ -79,7 +126,7 @@
   flex-direction: column;
   align-items: flex-end;
   z-index: 0;
-  padding: 20px 20px;
+  padding: 20px 20px 110px 20px;
 }
 
 .card-clarity-text p {
@@ -91,17 +138,6 @@
   overflow: visible;
 }
 
-.card-learn img {
-  position: absolute;
-  width: 20%;
-  height: auto;
-  top: 20px;
-  right: 10px;
-  z-index: 1;
-  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.2));
-  animation: float 3s ease-in-out infinite;
-
-}
 
 .card-learn-text {
   width: 100%;
@@ -110,7 +146,7 @@
   flex-direction: column;
   align-items: flex-start;
   z-index: 0;
-  padding: 20px 20px;
+  padding: 20px 20px 110px 20px;
 }
 
 .card-learn-text p {
@@ -122,17 +158,6 @@
   overflow: visible;
 }
 
-.card-mentor img {
-  position: absolute;
-  width: 20%;
-  height: auto;
-  down: 100px;
-  left: -30px;
-  z-index: 1;
-  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.2));
-  animation: float 3s ease-in-out infinite;
-
-}
 
 .card-mentor-text {
   width: 100%;
@@ -141,7 +166,7 @@
   flex-direction: column;
   align-items: flex-end;
   z-index: 0;
-  padding: 20px 20px;
+  padding: 20px 20px 110px 20px;
 }
 
 .card-mentor-text p {
@@ -153,17 +178,6 @@
   overflow: visible;
 }
 
-.card-showcase img {
-  position: absolute;
-  width: 20%;
-  height: auto;
-  top: 400px;
-  right: -15px;
-  z-index: 1;
-  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.2));
-  animation: float 3s ease-in-out infinite;
-
-}
 
 .card-showcase-text {
   width: 100%;
@@ -172,7 +186,7 @@
   flex-direction: column;
   align-items: flex-start;
   z-index: 0;
-  padding: 20px 20px;
+  padding: 20px 20px 110px 20px;
 }
 
 .card-showcase-text p {
