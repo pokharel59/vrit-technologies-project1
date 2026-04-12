@@ -1,5 +1,5 @@
 import './skillPage.css';
-import { ArrowBigRight, ArrowLeftIcon, ArrowRightIcon } from 'lucide-react';
+import {ArrowRightIcon } from 'lucide-react';
 
 function SkillPage() {
   return (
