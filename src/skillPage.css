@@ -109,8 +109,8 @@
   top: -100px;
   left: 150px;
   position: absolute;
-  font-weight: bold;
-  font-family: 'Plus Jakarta Sans', sans-serif; 
+  font-weight: bold;       
+  font-family: 'Plus Jakarta Sans', sans-serif; /* Tried Nohemi but could not apply */
 
 }
 
