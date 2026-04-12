@@ -7,12 +7,12 @@ function App() {
       <div className="feature-section">
         <div className="feature-section-content">
           <div className="feature-section-title">
-            <h3> Your SkillShikshya Journey</h3>
-            <h1>Step In. Skill Up. Stand Out.</h1>
+            <p> Your SkillShikshya Journey</p>
+            <h1> <span className='highlight'>Step</span> In. <span className='highlight'>Skill</span> Up. <span className='highlight'>Stand</span> Out. 🚀</h1>
           </div>
           <div className="feature-section-card">
             <div className='card-clarity'>
-                <img src='Clarity.svg'/>
+              <img src='Clarity.svg'/>
               <div className='card-clarity-text'>
                 <h2>Start with clarity</h2>
                 <h3>Step into better learning path.</h3>
